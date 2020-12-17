@@ -28,12 +28,23 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/snowb.png",
+              "src/snowboard.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/animate.css",
+              "src/assets/css/loading-bar.min.css",
+              "src/assets/css/main.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/angular.min.js",
+              "src/assets/js/angular-inview.js",
+              "src/assets/js/app.js",
+              "src/assets/js/jquery-3.1.1.js",
+              "src/assets/js/myangular.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,6 +102,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
+              "src/snowb.png",
+              "src/snowboard.ico",
               "src/assets"
             ],
             "styles": [
@@ -123,9 +136,16 @@
               "devServerTarget": "angular-template:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "angular-template"
+  "defaultProject": "angular-template",
+  "cli": {
+    "analytics": false
+  }
 }
